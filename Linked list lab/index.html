@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Linked List Lab</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Linked list lab<small>Watch every pointer change, step by step.</small></h1>
+  <div class="hd">
+    <div class="seg" id="types" role="group" aria-label="List type">
+      <button data-t="singly" class="on">Singly</button><button data-t="doubly">Doubly</button><button data-t="circular">Circular</button><button data-t="cdoubly">Circular doubly</button>
+    </div>
+    <button class="b" id="theme" aria-label="Toggle theme">Theme</button>
+  </div>
+</header>
+<div class="app">
+<aside>
+  <div class="pn">
+    <h2>Build the list</h2>
+    <div class="grp"><div class="row">
+      <label>Number of nodes (0–12)<input id="n" type="number" min="0" max="12" value="5"></label>
+    </div><button class="b pri" data-k="gen" data-l="Build">Build list</button></div>
+    <div class="row grp"><label>Value<input id="v" type="number" placeholder="random"></label><label>Index<input id="ix" type="number" min="0" placeholder="0"></label></div>
+    <h2>Insert</h2>
+    <div class="row grp"><button class="b" data-k="ihead" data-l="Ins head">At head</button><button class="b" data-k="itail" data-l="Ins tail">At tail</button><button class="b" data-k="iat" data-l="Ins index">At index</button></div>
+    <h2>Delete</h2>
+    <div class="row grp"><button class="b dng" data-k="dhead" data-l="Del head">Head</button><button class="b dng" data-k="dtail" data-l="Del tail">Tail</button><button class="b dng" data-k="dat" data-l="Del index">At index</button><button class="b dng" data-k="dval" data-l="Del value">By value</button></div>
+    <h2>Other methods</h2>
+    <div class="row grp"><button class="b" data-k="search" data-l="Search">Search value</button><button class="b" data-k="update" data-l="Update">Update at index</button><button class="b" data-k="reverse" data-l="Reverse">Reverse</button><button class="b" data-k="sort" data-l="Sort">Sort</button><button class="b dng" data-k="clear" data-l="Clear">Clear</button></div>
+    <label>Animation speed<input id="sp" type="range" min="1" max="10" value="6"></label>
+  </div>
+</aside>
+<main>
+  <div class="stats" id="st"></div>
+  <div id="stage" aria-live="polite"></div>
+  <div class="pn"><h2>Step log</h2><div class="log" id="log"></div></div>
+  <div class="two">
+    <div class="pn"><h2>Node values</h2><div class="sc" id="c1"></div></div>
+    <div class="pn"><h2>Steps taken per operation (last 10)</h2><div class="sc" id="c2"></div></div>
+  </div>
+  <div class="two">
+    <div class="pn"><h2>Memory diagram</h2><div class="sc"><table id="mem"></table></div></div>
+    <div class="pn"><h2>Time complexity</h2><table id="cx"></table></div>
+  </div>
+</main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
